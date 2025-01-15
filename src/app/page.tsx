@@ -34,35 +34,26 @@ const todos = [
     author: "auhor 5",
     staff: "staff 5",
   },
-]
-
+];
 
 export default function Home() {
   return (
     <div>
       <h1>Home</h1>
-      <div className="m-[5rem]">
-        {
-          todos.map((todo, i) => {
-            return(
-                  <div key={i} className="border-4 p-4">
-                    <h1>{todo.title}</h1>
-                    <p>{todo.description}</p>
-                    <div>{todo.link}</div>
-                    <div>{todo.author}</div>
-                    <div>{todo.staff}</div>
-                  </div>
-            )
-          })
-        }
+      <div className='m-[5rem]'>
+        {todos.map((todo, i) => {
+          return (
+            <div key={i} className='border-4 p-4'>
+              <h1>{todo.title}</h1>
+              <p>{todo.description}</p>
+              <div>{todo.link}</div>
+              <div>{todo.author}</div>
+              <div>{todo.staff}</div>
+            </div>
+          );
+        })}
         <div>-----</div>
-     
-
       </div>
     </div>
   );
 }
-
-
-
-
